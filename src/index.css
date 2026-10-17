@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* shadcn tokens mapped to the Banasura palette */
+    --background: 39 75% 94%; /* butter #FBF3E4 */
+    --foreground: 26 41% 16%; /* teak #3A2618 */
+    --card: 0 0% 100%;
+    --card-foreground: 26 41% 16%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 26 41% 16%;
+    --primary: 18 54% 49%; /* terracotta #C0623A */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 124 18% 46%; /* banana leaf #5F8A62 */
+    --secondary-foreground: 0 0% 100%;
+    --muted: 39 75% 94%;
+    --muted-foreground: 25 28% 37%; /* bark #7A5A44 */
+    --accent: 40 84% 69%; /* mango #F2C66D */
+    --accent-foreground: 26 41% 16%;
+    --destructive: 0 70% 45%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 26 41% 16% / 0.12;
+    --input: 26 41% 16% / 0.2;
+    --ring: 18 54% 49%;
+    --radius: 0.5rem;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 84px;
+  }
+  body {
+    @apply bg-butter text-teak font-sans antialiased;
+    margin: 0;
+  }
+  a {
+    @apply text-terracotta no-underline transition-colors hover:text-teak;
+  }
+  h1, h2, h3 {
+    text-wrap: balance;
+  }
+}
+
+@layer components {
+  .eyebrow {
+    @apply text-[13px] font-bold uppercase tracking-[.12em] text-bark;
+  }
+  .accent {
+    @apply font-serif italic font-normal text-terracotta;
+  }
+  .accent-dark {
+    @apply font-serif italic font-normal text-mango;
+  }
+  .no-scrollbar {
+    scrollbar-width: none;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}
